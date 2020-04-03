@@ -8,6 +8,7 @@ function MainNav() {
         fixed: "bottom",
         variant: "dark"
     }
+    
     return (
         <div>
             <Navbar {...navBarProps}>

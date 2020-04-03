@@ -4,6 +4,7 @@
 // Colors
 $main-background-color: #000;
 $main-font-color: #fff;
+//$title-font-color: #ef4657;
 
 // Fonts
 $main-font-family: 'Open Sans', sans-serif;
@@ -19,6 +20,21 @@ body {
 }
 
 .App {
-    margin: 1rem;
     font-family: $main-font-family;
+}
+
+.main-content {
+    h1, h2, h3, h4 {
+        color: #000;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin: 40px 40px 10px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 0 40px;
+    }
 }
