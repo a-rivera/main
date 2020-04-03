@@ -1,7 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-const openBrowserPlugin = new OpenBrowserPlugin({url: 'http://localhost:3000'});
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, "public/index.html"),
@@ -36,10 +34,9 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
-    //contentBase: path.join(__dirname, "public/"),
+    open: true,
     port: 3000,
-    //publicPath: "http://localhost:3000/dist/",
     watchOptions: { poll: true }
   },
-  plugins: [htmlWebpackPlugin, openBrowserPlugin]
+  plugins: [htmlWebpackPlugin]
 };
