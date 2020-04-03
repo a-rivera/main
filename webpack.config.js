@@ -8,7 +8,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: "./src/index.js",
-  mode: "development",
+  //mode: "development",
   module: {
     rules: [
       {
@@ -25,16 +25,15 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
+    path: path.join(__dirname, "dist"),
+    //publicPath: "dist/",
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    //contentBase: path.join(__dirname, "public/"),
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    watchOptions: { poll: true },
-    hotOnly: true
+    //publicPath: "http://localhost:3000/dist/",
+    watchOptions: { poll: true }
   },
   plugins: [htmlWebpackPlugin]
 };
