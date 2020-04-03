@@ -1,5 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const openBrowserPlugin = new OpenBrowserPlugin({url: 'http://localhost:3000'});
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, "public/index.html"),
@@ -8,7 +10,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: "./src/index.js",
-  //mode: "development",
+  mode: "production",
   module: {
     rules: [
       {
@@ -18,8 +20,12 @@ module.exports = {
         options: { presets: ["@babel/env"] }
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"]
       }
     ]
   },
@@ -35,5 +41,5 @@ module.exports = {
     //publicPath: "http://localhost:3000/dist/",
     watchOptions: { poll: true }
   },
-  plugins: [htmlWebpackPlugin]
+  plugins: [htmlWebpackPlugin, openBrowserPlugin]
 };

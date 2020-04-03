@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+// Colors
+$main-background-color: #000;
+$main-font-color: #fff;
+
+// Fonts
+$main-font-family: 'Open Sans', sans-serif;
+
+body {
+    background: url('../public/images/background.jpg') no-repeat center center fixed;
+    background-color: $main-background-color;
+    color: $main-font-color;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.App {
+    margin: 1rem;
+    font-family: $main-font-family;
+}
