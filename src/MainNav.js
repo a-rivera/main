@@ -8,11 +8,11 @@ function MainNav() {
         fixed: "bottom",
         variant: "dark"
     }
-    
+
     return (
         <div>
             <Navbar {...navBarProps}>
-                <Navbar.Brand href="#home">a-rivera</Navbar.Brand>
+                <Navbar.Brand href="#home">a.rivera</Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-navbar-nav" />
                 <Navbar.Collapse id="main-navbar-nav">
                     <Nav className="ml-auto">
