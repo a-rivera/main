@@ -7,53 +7,92 @@ $medium-viewport: 768px;
 $large-viewport: 1025px;
 
 // Colors
-$main-background-color: #000;
-$main-font-color: #fff;
+$main-background-color: #ccc;
+$main-font-color: #000;
 
 // Fonts
 $main-font-family: 'Raleway', sans-serif;
 $title-font-family: 'Montserrat', sans-serif;
 
 body {
-    background: url('../public/images/background.jpg') no-repeat center center fixed;
     background-color: $main-background-color;
     color: $main-font-color;
     font-family: $main-font-family;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-.main-content {
     h1, h2, h3, h4 {
-        color: #000;
+        color: $main-font-color;
         font-family: $title-font-family;
         font-weight: lighter;
     }
 
+    h1 {
+        font-size: 2.5rem;
+        @media (min-width: $medium-viewport) {
+            font-size: 3rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        @media (min-width: $medium-viewport) {
+            font-size: 2rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        @media (min-width: $medium-viewport) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.main {
+    margin-bottom: 65px;
+}
+
+.main-content {
+    background: url('../public/images/background.jpg') no-repeat center center fixed;
+    background-color: $main-background-color;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 65px);
+
     .main-title {
-        margin: 50vh auto 0;
+        margin: 0 auto;
+        padding-top: 50vh;
         text-align: center;
         text-transform: uppercase;
         width: 100%;
         @media (min-width: $medium-viewport) {
-            margin-top: 60vh;
+            padding-top: 60vh;
         }
 
         h1 {
-            font-size: 2.5rem;
             margin-bottom: 10px;
-            @media (min-width: $medium-viewport) {
-                font-size: 3rem;
-            }
         }
+    }
+}
 
-        h2 {
-            font-size: 1.5rem;
-            @media (min-width: $medium-viewport) {
-                font-size: 2rem;
-            }
-        }
+.contact-content {
+    margin: 70px auto 0;
+    width: 100%;
+    @media (min-width: $medium-viewport) {
+        width: 50%;
+    }
+
+    h1, h3 {
+        text-align: center;
+    }
+
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        padding: 0 15px 20px;
     }
 }
