@@ -33,6 +33,7 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
+    historyApiFallback: true,
     open: true,
     port: 3000,
     watchOptions: { poll: true }

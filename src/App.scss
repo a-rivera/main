@@ -18,14 +18,11 @@ body {
     background: url('../public/images/background.jpg') no-repeat center center fixed;
     background-color: $main-background-color;
     color: $main-font-color;
+    font-family: $main-font-family;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
-}
-
-.App {
-    font-family: $main-font-family;
+    background-size: cover;
 }
 
 .main-content {

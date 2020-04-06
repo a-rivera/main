@@ -1,6 +1,6 @@
 import React from "react"
 
-function Content() {
+function Home() {
     return (
         <div className="main-content">
             <div className="main-title">
@@ -11,4 +11,4 @@ function Content() {
     )
 }
 
-export default Content
+export default Home
